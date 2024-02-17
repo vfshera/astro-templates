@@ -1,0 +1,11 @@
+{
+  "name": "astro-templates",
+  "version": "1.0.0",
+  "description": "Starter templates for Astro",
+  "scripts": {
+    "dev": "pnpm -r dev"
+  },
+  "keywords": [],
+  "author": "Franklin Shera",
+  "license": "MIT"
+}
