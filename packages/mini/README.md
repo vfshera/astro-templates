@@ -1,5 +1,7 @@
 # Astro Starter Kit: Mini
 
+![Mini Cover](./mini.png)
+
 Start your new Astro project by running.
 
 ```sh
