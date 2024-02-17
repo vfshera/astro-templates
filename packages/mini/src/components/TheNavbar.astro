@@ -1,1 +1,40 @@
-<nav>The Mini</nav>
+---
+import { site } from "@/constants/config";
+
+const links = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "About",
+    url: "#about",
+  },
+  {
+    name: "Contact",
+    url: "#contact",
+  },
+];
+
+interface Props {
+  class?: string;
+}
+const { class: classes } = Astro.props;
+---
+
+<header class:list={["py-5 bg-white shadow", classes]}>
+  <nav class="max-w-[95vw] mx-auto flex items-center justify-between">
+    {site.name}
+    <ul class="flex items-center gap-5">
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.url} class="hover:underline">
+              {link.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
