@@ -1,9 +1,13 @@
 ---
+import { site } from "@/constants/config";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-  <section>
-    <h1>The Mini Starter</h1>
+  <section
+    class="max-w-[90vw] mx-auto space-y-5 flex flex-col justify-center h-full text-center"
+  >
+    <h1 class="text-5xl font-bold">{site.name}</h1>
+    <p>{site.description}</p>
   </section>
 </Layout>
