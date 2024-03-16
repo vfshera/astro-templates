@@ -27,7 +27,7 @@ const { title, description, ...props } = Astro.props;
       {...props}
     />
   </head>
-  <body class="flex flex-col h-full">
+  <body class="flex flex-col min-h-full">
     <TheNavbar />
     <main class="flex-1">
       <slot />
