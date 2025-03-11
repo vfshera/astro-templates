@@ -3,13 +3,13 @@
 Create your new Astro project by running.
 
 ```sh
-npm create astro@latest -- --template vfshera/astro-templates/packages/mini
+npm create astro@latest -- --template vfshera/astro-templates/apps/mini
 ```
 
 OR
 
 ```sh
-pnpm create astro@latest --template vfshera/astro-templates/packages/mini
+pnpm create astro@latest --template vfshera/astro-templates/apps/mini
 ```
 
 ## 🧞 Commands
