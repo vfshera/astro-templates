@@ -3,9 +3,22 @@
   "version": "1.0.0",
   "description": "Starter templates for Astro",
   "scripts": {
-    "dev": "pnpm -r dev"
+    "dev": "pnpm -r dev",
+    "release": "tsx ./scripts/release.ts"
   },
   "keywords": [],
   "author": "Franklin Shera",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.10.0",
+    "defu": "^6.1.4",
+    "tinyexec": "^0.3.2",
+    "tinyglobby": "^0.2.12",
+    "tinyrainbow": "^2.0.0",
+    "tsx": "^4.19.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10"
+  }
 }
