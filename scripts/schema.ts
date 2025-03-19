@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const baseSchema = z.object({
+export const templateSchema = z.object({
   name: z
     .string()
     .min(4)
@@ -9,6 +9,7 @@ const baseSchema = z.object({
       "Name must be lowercase, without spaces, and can only contain letters, numbers, and hyphens"
     )
     .transform((val) => val.toLowerCase()),
+  title: z.string().min(4),
   description: z
     .string()
     .min(10)
@@ -17,11 +18,7 @@ const baseSchema = z.object({
     }),
   dependencies: z.array(z.string()).optional().default([]),
   devDependencies: z.array(z.string()).optional().default([]),
+  extends: z.array(z.string().min(4)).optional().default([]),
 });
 
-export const templateSchema = baseSchema.extend({});
-
-export const featureSchema = baseSchema.extend({});
-
 export type Template = z.infer<typeof templateSchema>;
-export type Feature = z.infer<typeof featureSchema>;

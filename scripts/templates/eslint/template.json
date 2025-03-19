@@ -1,0 +1,14 @@
+{
+  "name": "with-eslint",
+  "title": "Astro + Eslint",
+  "description": "Eslint integration to Astro",
+  "devDependencies": [
+    "@typescript-eslint/parser",
+    "astro-eslint-parser",
+    "eslint",
+    "eslint-plugin-astro",
+    "globals",
+    "typescript-eslint",
+    "typescript"
+  ]
+}
