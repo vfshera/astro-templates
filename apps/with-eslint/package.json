@@ -1,0 +1,24 @@
+{
+  "name": "with-eslint",
+  "description": "Eslint integration to Astro",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.5.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^8.26.1",
+    "astro-eslint-parser": "^1.2.1",
+    "eslint": "^9.22.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "globals": "^16.0.0",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1"
+  }
+}
