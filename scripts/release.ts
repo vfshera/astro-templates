@@ -4,20 +4,21 @@ import {
   cleanUp,
   createRootReadme,
   generateTemplate,
+  getTimestampVersion,
   loadTemplates,
   prepare,
 } from "./utils";
-import { intro, outro, spinner, tasks } from "@clack/prompts";
+import { intro, outro, tasks } from "@clack/prompts";
 import c from "tinyrainbow";
 import { BLANK_TEMPLATE_NAME, BUILD_TEMPLATES_DIR } from "./constants";
+
+import { x } from "tinyexec";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 
 const templatesDir = path.join(scriptDir, "templates");
 
 (async () => {
-  const s = spinner();
-
   intro(c.bgCyan(c.black(c.bold(" Start Astro "))));
 
   await prepare(scriptDir);
@@ -45,5 +46,10 @@ const templatesDir = path.join(scriptDir, "templates");
 
   await cleanUp(scriptDir);
 
-  outro("Finished");
+  const version = getTimestampVersion();
+
+  await x("git", ["commit", "-am", `chore: Release ${version}`], {
+    nodeOptions: { stdio: "inherit" },
+  });
+  outro(`${c.bold(c.green("Done!"))} New version: ${version}`);
 })();
