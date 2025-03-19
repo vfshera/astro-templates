@@ -1,8 +1,13 @@
-# Astro Templates
-
+# Start Astro
 Starter templates for Astro
+ 
 
-1. Minimal starter template for Astro. [👉 view source](https://github.com/vfshera/astro-templates/tree/main/packages/mini)
-   ![Minimal Starter](./images/mini.png)
+| Template                | Description                                           |
+| :--------------------- | :----------------------------------------------- | 
+| [Astro base template](https://github.com/vfshera/start-astro/tree/main/apps/base) | Astro base template |
+| [Astro + Eslint](https://github.com/vfshera/start-astro/tree/main/apps/with-eslint) | Eslint integration to Astro |
+| [Astro + Prettier](https://github.com/vfshera/start-astro/tree/main/apps/with-prettier) | Prettier integration to Astro |
 
-   ***
+  > Updated on 3/19/2025
+
+  License [MIT](https://github.com/vfshera/start-astro/blob/main/LICENSE)

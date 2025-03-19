@@ -46,10 +46,15 @@ const templatesDir = path.join(scriptDir, "templates");
 
   await cleanUp(scriptDir);
 
-  const version = getTimestampVersion();
-
-  await x("git", ["commit", "-am", `chore: Release ${version}`], {
+  await x("pnpm", ["lint:fix"], {
     nodeOptions: { stdio: "inherit" },
   });
+
+  const version = getTimestampVersion();
+
+  await x("git", ["commit", "-am", `chore: 🎉 Release ${version}`], {
+    nodeOptions: { stdio: "inherit" },
+  });
+
   outro(`${c.bold(c.green("Done!"))} New version: ${version}`);
 })();

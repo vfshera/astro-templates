@@ -1,13 +1,13 @@
 {
   "name": "start-astro",
-  "version": "1.0.0",
   "description": "Starter templates for Astro",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "pnpm -r dev",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --fix",
-    "release": "tsx ./scripts/release.ts && pnpm lint:fix"
+    "release": "tsx ./scripts/release.ts"
   },
   "keywords": [],
   "author": "Franklin Shera",
