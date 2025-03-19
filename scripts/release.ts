@@ -1,6 +1,12 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { cleanUp, generateTemplate, loadTemplates, prepare } from "./utils";
+import {
+  cleanUp,
+  createRootReadme,
+  generateTemplate,
+  loadTemplates,
+  prepare,
+} from "./utils";
 import { intro, outro, spinner, tasks } from "@clack/prompts";
 import c from "tinyrainbow";
 import { BLANK_TEMPLATE_NAME, BUILD_TEMPLATES_DIR } from "./constants";
@@ -34,6 +40,8 @@ const templatesDir = path.join(scriptDir, "templates");
       };
     })
   );
+
+  await createRootReadme(templates, path.join(scriptDir, ".."));
 
   await cleanUp(scriptDir);
 

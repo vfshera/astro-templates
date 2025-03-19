@@ -250,3 +250,28 @@ All commands are run from the root of the project, from a terminal:
 Feel free to check Astro [documentation](https://docs.astro.build) or [Discord server](https://astro.build/chat).
 `;
 }
+
+export async function createRootReadme(
+  templates: Template[],
+  rootPath: string
+) {
+  const readmeContents = `# Start Astro
+Starter templates for Astro
+ 
+
+| Template                | Description                                           |
+| :--------------------- | :----------------------------------------------- | 
+${templates
+  .map(
+    (t) =>
+      `| [${t.title}](https://github.com/vfshera/start-astro/tree/main/apps/${t.name}) | ${t.description} |`
+  )
+  .join("\n")}
+
+  > Updated on ${new Date().toLocaleDateString()}
+
+  License [MIT](https://github.com/vfshera/start-astro/blob/main/LICENSE)
+`;
+
+  await fs.writeFile(path.join(rootPath, "README.md"), readmeContents);
+}
